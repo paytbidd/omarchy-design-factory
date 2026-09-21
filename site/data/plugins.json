@@ -1,0 +1,80 @@
+{
+  "owner": "paytbidd",
+  "exclude": [
+    "omarchy-design-factory"
+  ],
+  "plugins": [
+    {
+      "name": "omarchy-apple-music-mini",
+      "description": "Miniplayer overlay for Omarchy Apple Music: latest upstream plus playback and UI tweaks",
+      "html_url": "https://github.com/paytbidd/omarchy-apple-music-mini",
+      "clone_url": "https://github.com/paytbidd/omarchy-apple-music-mini.git",
+      "homepage": "",
+      "updated_at": "2026-09-21T04:47:04Z",
+      "stargazers_count": 0,
+      "title": "Apple Music Mini",
+      "blurb": "Miniplayer overlay for Omarchy Apple Music — latest upstream plus playback and UI tweaks.",
+      "icon": "icons/apple-music-mini.svg"
+    },
+    {
+      "name": "omarchy-macromancy",
+      "description": "For Mac users on PC keyboards who switched to Omarchy: Command next to Space, plus select-all, undo, redo, hide, and quit.",
+      "html_url": "https://github.com/paytbidd/omarchy-macromancy",
+      "clone_url": "https://github.com/paytbidd/omarchy-macromancy.git",
+      "homepage": "",
+      "updated_at": "2026-09-21T04:47:05Z",
+      "stargazers_count": 0,
+      "title": "Macromancy",
+      "blurb": "Command next to Space on PC keyboards, plus select-all, undo, redo, hide, and quit.",
+      "icon": "icons/macromancy.svg"
+    },
+    {
+      "name": "omarchy-patina",
+      "description": "Omarchy plugin: slight rounding, tight top gaps, and a soft hue-matched glow. Toggle from Style → Patina.",
+      "html_url": "https://github.com/paytbidd/omarchy-patina",
+      "clone_url": "https://github.com/paytbidd/omarchy-patina.git",
+      "homepage": "",
+      "updated_at": "2026-09-21T04:47:06Z",
+      "stargazers_count": 0,
+      "title": "Patina",
+      "blurb": "Slight rounding, tight gaps, and a soft hue-matched glow. Toggle from Style → Patina.",
+      "icon": "icons/patina.svg"
+    },
+    {
+      "name": "omarchy-redlight",
+      "description": "Omarchy bar toggle for a pure red Hyprland screen shader",
+      "html_url": "https://github.com/paytbidd/omarchy-redlight",
+      "clone_url": "https://github.com/paytbidd/omarchy-redlight.git",
+      "homepage": "",
+      "updated_at": "2026-09-21T04:47:06Z",
+      "stargazers_count": 0,
+      "title": "Redlight",
+      "blurb": "Bar toggle for a pure red Hyprland screen shader.",
+      "icon": "icons/redlight.svg"
+    },
+    {
+      "name": "omarchy-soundstage",
+      "description": "Omarchy plugin: media audio follows the screen the player is on.",
+      "html_url": "https://github.com/paytbidd/omarchy-soundstage",
+      "clone_url": "https://github.com/paytbidd/omarchy-soundstage.git",
+      "homepage": "",
+      "updated_at": "2026-09-21T04:47:07Z",
+      "stargazers_count": 0,
+      "title": "Soundstage",
+      "blurb": "Media audio follows the screen the player is on.",
+      "icon": "icons/soundstage.svg"
+    },
+    {
+      "name": "omarchy-type",
+      "description": "Omarchy font for Chromium apps: Apple Music, Grok Bot, YouTube",
+      "html_url": "https://github.com/paytbidd/omarchy-type",
+      "clone_url": "https://github.com/paytbidd/omarchy-type.git",
+      "homepage": "",
+      "updated_at": "2026-09-21T04:47:08Z",
+      "stargazers_count": 0,
+      "title": "Type",
+      "blurb": "Omarchy font for Chromium apps: Apple Music, Grok Bot, YouTube.",
+      "icon": "icons/type.svg"
+    }
+  ]
+}

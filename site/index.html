@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Design Factory — Payton Biddington</title>
+    <meta
+      name="description"
+      content="Payton’s Omarchy plugin shelf. Pixel icons, one-line installs, auto-listed from public paytbidd/omarchy-* repos."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="./icons/factory.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#plugins">Skip to plugins</a>
+    <div class="page">
+      <header class="mast">
+        <a class="who" href="https://github.com/paytbidd">
+          <img
+            class="avatar"
+            src="https://avatars.githubusercontent.com/u/780305?v=4"
+            width="44"
+            height="44"
+            alt="Payton Biddington"
+          />
+          <span class="who-copy">
+            <strong>Payton Biddington</strong>
+            <span class="handle">github.com/paytbidd</span>
+          </span>
+        </a>
+        <p class="blurb">
+          A small factory of Omarchy plugins. Pixel marks, one-line installs, no
+          marketplace.
+        </p>
+        <button class="scheme" type="button" data-scheme-toggle aria-label="Toggle color scheme">
+          Scheme
+        </button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="kicker">Omarchy · paytbidd</p>
+          <h1>Design Factory</h1>
+          <p class="lede">
+            Public <code>omarchy-*</code> plugins, listed from GitHub. Hand
+            overrides for blurbs and icons.
+          </p>
+        </section>
+
+        <section id="plugins" aria-labelledby="plugins-title">
+          <div class="section-head">
+            <h2 id="plugins-title">Plugins</h2>
+            <p class="count" data-count></p>
+          </div>
+          <div class="grid" data-plugin-grid>
+            <p class="empty">Loading the shelf…</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="foot">
+        <p>
+          <a href="https://github.com/paytbidd/omarchy-design-factory">This repo</a>
+          ·
+          <a href="https://paytonb.com">paytonb.com</a>
+          ·
+          <a href="https://omarchy.org">omarchy.org</a>
+        </p>
+        <p class="fine">
+          GitHub Pages default URL. No custom DNS. New public
+          <code>omarchy-*</code> repos appear on the next Action run.
+        </p>
+      </footer>
+    </div>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

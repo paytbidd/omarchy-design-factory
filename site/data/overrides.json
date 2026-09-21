@@ -1,0 +1,35 @@
+{
+  "exclude": ["omarchy-design-factory"],
+  "plugins": {
+    "omarchy-apple-music-mini": {
+      "title": "Apple Music Mini",
+      "blurb": "Miniplayer overlay for Omarchy Apple Music — latest upstream plus playback and UI tweaks.",
+      "icon": "icons/apple-music-mini.svg"
+    },
+    "omarchy-macromancy": {
+      "title": "Macromancy",
+      "blurb": "Command next to Space on PC keyboards, plus select-all, undo, redo, hide, and quit.",
+      "icon": "icons/macromancy.svg"
+    },
+    "omarchy-patina": {
+      "title": "Patina",
+      "blurb": "Slight rounding, tight gaps, and a soft hue-matched glow. Toggle from Style → Patina.",
+      "icon": "icons/patina.svg"
+    },
+    "omarchy-redlight": {
+      "title": "Redlight",
+      "blurb": "Bar toggle for a pure red Hyprland screen shader.",
+      "icon": "icons/redlight.svg"
+    },
+    "omarchy-soundstage": {
+      "title": "Soundstage",
+      "blurb": "Media audio follows the screen the player is on.",
+      "icon": "icons/soundstage.svg"
+    },
+    "omarchy-type": {
+      "title": "Type",
+      "blurb": "Omarchy font for Chromium apps: Apple Music, Grok Bot, YouTube.",
+      "icon": "icons/type.svg"
+    }
+  }
+}
