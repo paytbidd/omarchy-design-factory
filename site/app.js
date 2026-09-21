@@ -101,8 +101,8 @@ function rowTemplate(plugin, iconMarkup) {
         <code></code>
         <button class="copy" type="button" aria-label="Copy install command">${COPY_ICON}</button>
       </div>
+      <a class="repo" href="${plugin.html_url}">${GITHUB_ICON}<span>${escapeHtml(plugin.name)}</span></a>
     </div>
-    <a class="repo" href="${plugin.html_url}">${GITHUB_ICON}<span>${escapeHtml(plugin.name)}</span></a>
   `;
   article.querySelector("code").textContent = installCommand(plugin.name);
   const button = article.querySelector(".copy");
