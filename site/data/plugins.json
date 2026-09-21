@@ -1,7 +1,7 @@
 {
   "owner": "paytbidd",
   "exclude": [
-    "omarchy-design-factory"
+    "omarchy-plugins"
   ],
   "plugins": [
     {
@@ -34,7 +34,7 @@
       "html_url": "https://github.com/paytbidd/omarchy-patina",
       "clone_url": "https://github.com/paytbidd/omarchy-patina.git",
       "homepage": "",
-      "updated_at": "2026-09-21T04:47:06Z",
+      "updated_at": "2026-09-21T05:25:02Z",
       "stargazers_count": 0,
       "title": "Patina",
       "blurb": "Slight rounding, tight gaps, and a soft hue-matched glow. Toggle from Style → Patina.",

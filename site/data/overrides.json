@@ -1,5 +1,5 @@
 {
-  "exclude": ["omarchy-design-factory"],
+  "exclude": ["omarchy-plugins"],
   "plugins": {
     "omarchy-apple-music-mini": {
       "title": "Apple Music Mini",

@@ -11,7 +11,7 @@ import urllib.request
 from pathlib import Path
 
 OWNER = "paytbidd"
-SELF_REPO = "omarchy-design-factory"
+SELF_REPO = "omarchy-plugins"
 API = "https://api.github.com"
 ROOT = Path(__file__).resolve().parent.parent
 SITE_DATA = ROOT / "site" / "data"
@@ -91,7 +91,7 @@ def fetch_public_repos(owner: str = OWNER, token: str | None = None) -> list[dic
         url = f"{API}/users/{owner}/repos?per_page=100&page={page}&type=public&sort=full_name"
         req = urllib.request.Request(url)
         req.add_header("Accept", "application/vnd.github+json")
-        req.add_header("User-Agent", "omarchy-design-factory")
+        req.add_header("User-Agent", "omarchy-plugins")
         req.add_header("X-GitHub-Api-Version", "2022-11-28")
         if token:
             req.add_header("Authorization", f"Bearer {token}")

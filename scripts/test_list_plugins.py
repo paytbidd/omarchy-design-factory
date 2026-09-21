@@ -13,16 +13,16 @@ from list_plugins import apply_overrides, collect, excluded_names, is_listed
 class ListPluginsTests(unittest.TestCase):
     def test_excludes_self_and_overrides(self):
         names = excluded_names({"exclude": ["omarchy-secret"]})
-        self.assertIn("omarchy-design-factory", names)
+        self.assertIn("omarchy-plugins", names)
         self.assertIn("omarchy-secret", names)
 
     def test_prefix_and_visibility_rules(self):
-        excluded = {"omarchy-design-factory"}
+        excluded = {"omarchy-plugins"}
         self.assertTrue(
             is_listed({"name": "omarchy-type", "private": False, "fork": False}, excluded)
         )
         self.assertFalse(
-            is_listed({"name": "omarchy-design-factory", "private": False}, excluded)
+            is_listed({"name": "omarchy-plugins", "private": False}, excluded)
         )
         self.assertFalse(is_listed({"name": "notes", "private": False}, excluded))
         self.assertFalse(is_listed({"name": "omarchy-type", "private": True}, excluded))
@@ -39,9 +39,9 @@ class ListPluginsTests(unittest.TestCase):
                 "fork": False,
             },
             {
-                "name": "omarchy-design-factory",
+                "name": "omarchy-plugins",
                 "description": "This site",
-                "html_url": "https://github.com/paytbidd/omarchy-design-factory",
+                "html_url": "https://github.com/paytbidd/omarchy-plugins",
                 "private": False,
                 "fork": False,
             },

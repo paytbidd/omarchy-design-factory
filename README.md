@@ -1,17 +1,17 @@
-# Design Factory
+# Omarchy plugins
 
-Payton Biddington’s public shelf of [Omarchy](https://omarchy.org) plugins.
+Payton Biddington’s public shelf of [Omarchy](https://omarchy.org) tweaks.
 
-**Live site:** [https://paytbidd.github.io/omarchy-design-factory/](https://paytbidd.github.io/omarchy-design-factory/)
+**Live site:** [https://paytbidd.github.io/omarchy-plugins/](https://paytbidd.github.io/omarchy-plugins/)
 
 GitHub Pages default URL only. No custom DNS. Nothing is submitted to a marketplace.
 
-The header is Payton’s GitHub avatar, name, [github.com/paytbidd](https://github.com/paytbidd), and a short factory blurb. Cards use `prefers-color-scheme`: **blue** in light, **orange** in dark.
+The header is Payton’s GitHub avatar, name, and [github.com/paytbidd](https://github.com/paytbidd). Listings are one full-width row each. `prefers-color-scheme`: **blue** in light, **orange** in dark. A moon in the footer can override that (filled = night, outline = day) and persists in `localStorage`.
 
 ## What ships
 
 - Static site in `site/`
-- One-color pixel SVG icons
+- 24×24 one-color marks from [pixelarticons](https://github.com/halfmage/pixelarticons) (MIT)
 - Install line for every plugin:
 
   ```bash
@@ -19,7 +19,7 @@ The header is Payton’s GitHub avatar, name, [github.com/paytbidd](https://gith
   ```
 
 - A GitHub Action that lists public `paytbidd` repos prefixed `omarchy-*` and deploys Pages
-- `omarchy-design-factory` is excluded from the shelf
+- `omarchy-plugins` (this site) is excluded from the shelf
 
 ## Auto-list
 
@@ -27,13 +27,7 @@ The header is Payton’s GitHub avatar, name, [github.com/paytbidd](https://gith
 
 [`scripts/list_plugins.py`](scripts/list_plugins.py) calls the public GitHub API, keeps `omarchy-*` repos, drops this site, and writes `site/data/plugins.json`. The site then merges that list with hand overrides.
 
-Enable Pages once (this repo’s tokens cannot flip that setting):
-
-1. Open [Settings → Pages](https://github.com/paytbidd/omarchy-design-factory/settings/pages)
-2. Set **Source** to **GitHub Actions**
-3. Re-run the **Deploy site** workflow under Actions
-
-The first deploys failed with `Resource not accessible by integration` until that source is set. After a green deploy the URL above is live.
+Pages source is **GitHub Actions**. After a green **Deploy site** run the URL above is live.
 
 ## Hand overrides
 
@@ -41,7 +35,7 @@ Edit [`site/data/overrides.json`](site/data/overrides.json).
 
 ```json
 {
-  "exclude": ["omarchy-design-factory"],
+  "exclude": ["omarchy-plugins"],
   "plugins": {
     "omarchy-type": {
       "title": "Type",
@@ -55,25 +49,37 @@ Edit [`site/data/overrides.json`](site/data/overrides.json).
 | Field | Effect |
 | --- | --- |
 | `exclude` | Extra repo names to hide (this repo is always hidden) |
-| `title` | Card heading. Default: `omarchy-` stripped and title-cased |
+| `title` | Row heading. Default: `omarchy-` stripped and title-cased |
 | `blurb` | One-line description. Default: the GitHub repo description |
 | `icon` | Path under `site/` to a 1-color SVG. Default: `icons/<short-name>.svg`, then `icons/default.svg` |
-| `hidden: true` | Keep the repo out of the grid |
-
-Icons are 16×16 pixel SVGs filled with `currentColor`, so they follow the blue/orange accent. To add or redraw one, edit the ASCII maps in [`scripts/generate_icons.py`](scripts/generate_icons.py) and run:
-
-```bash
-python3 scripts/generate_icons.py
-```
+| `hidden: true` | Keep the repo out of the list |
 
 A new public `omarchy-*` repo on `paytbidd` shows up on the next Action run. Add an override if you want a tighter blurb or a custom mark.
+
+## Icons
+
+Plugin marks are vendored from **pixelarticons** (MIT, © Gerrit Halfmann), a strict 24×24 `currentColor` grid. Displayed at 24px so the pixels stay sharp.
+
+| Plugin | Glyph |
+| --- | --- |
+| Apple Music Mini | `music` |
+| Macromancy | `keyboard` |
+| Patina | `frame` |
+| Redlight | `sun` |
+| Soundstage | `monitor` |
+| Type | `letter-a` |
+| Default | `layout` |
+| Copy / copied | `copy` / `check` |
+
+The 16px GitHub mark next to each repo name is from **Primer Octicons** (MIT, © GitHub). The footer moon is a 16px crescent: outline for day, filled for night.
+
+See [`site/icons/LICENSE-pixelarticons.txt`](site/icons/LICENSE-pixelarticons.txt). Typeface is [Geist](https://vercel.com/font) (SIL OFL), the same family omarchy.org uses.
 
 ## Local
 
 ```bash
-python3 scripts/generate_icons.py
 python3 scripts/list_plugins.py
-python3 -m unittest scripts/test_list_plugins.py
+python3 -m unittest scripts.test_list_plugins
 python3 -m http.server 4173 --directory site
 ```
 
