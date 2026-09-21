@@ -201,8 +201,9 @@ code {
 
 .body {
   min-width: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: stretch;
 }
 
 .row h2 {
@@ -226,6 +227,9 @@ code {
   margin-top: 0.7rem;
   min-width: 0;
   width: 100%;
+  max-width: 100%;
+  justify-self: stretch;
+  box-sizing: border-box;
   padding: 0.28rem 0.28rem 0.28rem 0.6rem;
   background: var(--chip);
   border-radius: 4px;
@@ -279,7 +283,7 @@ code {
 .repo {
   display: inline-flex;
   align-items: center;
-  align-self: flex-start;
+  justify-self: start;
   gap: 0.4rem;
   margin-top: 0.65rem;
   color: var(--muted);
