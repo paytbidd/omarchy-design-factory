@@ -6,7 +6,7 @@ Payton Biddington’s public shelf of [Omarchy](https://omarchy.org) tweaks.
 
 GitHub Pages default URL only. No custom DNS. Nothing is submitted to a marketplace.
 
-The header is Payton’s GitHub avatar, name, and [github.com/paytbidd](https://github.com/paytbidd). Listings are one full-width row each. `prefers-color-scheme`: **blue** in light, **orange** in dark. A moon in the footer can override that (filled = night, outline = day) and persists in `localStorage`.
+The header is Payton’s GitHub avatar, name, and [github.com/paytbidd](https://github.com/paytbidd). Listings are one full-width row each. Body type and surfaces are neutrals. **Blue** (light) and **orange** (dark) are accent only — links, icons, focus, copy/moon hover. A moon in the footer overrides `prefers-color-scheme` (filled = night, outline = day) and persists in `localStorage`.
 
 ## What ships
 

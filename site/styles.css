@@ -15,40 +15,40 @@
 }
 
 :root {
-  --bg: #f4f6fb;
-  --fg: #1a4fd4;
+  --bg: #f6f6f4;
+  --fg: #1c1c1c;
+  --muted: #6a6a6a;
   --accent: #1a4fd4;
-  --muted: #4a6cc8;
-  --line: color-mix(in srgb, var(--fg) 14%, var(--bg));
+  --line: #e2e2de;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #12100e;
-    --fg: #ff8a2a;
+    --bg: #141413;
+    --fg: #f2f0ed;
+    --muted: #9a9894;
     --accent: #ff8a2a;
-    --muted: #c98445;
-    --line: color-mix(in srgb, var(--fg) 18%, var(--bg));
+    --line: #2c2b28;
     color-scheme: dark;
   }
 }
 
 html[data-scheme="light"] {
-  --bg: #f4f6fb;
-  --fg: #1a4fd4;
+  --bg: #f6f6f4;
+  --fg: #1c1c1c;
+  --muted: #6a6a6a;
   --accent: #1a4fd4;
-  --muted: #4a6cc8;
-  --line: color-mix(in srgb, var(--fg) 14%, var(--bg));
+  --line: #e2e2de;
   color-scheme: light;
 }
 
 html[data-scheme="dark"] {
-  --bg: #12100e;
-  --fg: #ff8a2a;
+  --bg: #141413;
+  --fg: #f2f0ed;
+  --muted: #9a9894;
   --accent: #ff8a2a;
-  --muted: #c98445;
-  --line: color-mix(in srgb, var(--fg) 18%, var(--bg));
+  --line: #2c2b28;
   color-scheme: dark;
 }
 
@@ -257,6 +257,16 @@ code {
   color: var(--accent);
 }
 
+.who:hover .handle,
+.foot a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .repo {
   display: inline-flex;
   align-items: center;
@@ -276,7 +286,7 @@ code {
 }
 
 .repo:hover {
-  color: var(--fg);
+  color: var(--accent);
   text-decoration: underline;
 }
 
@@ -309,6 +319,11 @@ code {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.moon:hover,
+.moon:focus-visible {
+  color: var(--accent);
 }
 
 .moon svg {
