@@ -276,8 +276,10 @@ pre,
   padding: 0.7rem 0.75rem;
   background: color-mix(in srgb, var(--fg) 6%, var(--card));
   border: 1px solid var(--line);
-  overflow-x: auto;
-  white-space: nowrap;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 .cmd button {
