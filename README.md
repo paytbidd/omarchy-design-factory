@@ -27,7 +27,13 @@ The header is Payton’s GitHub avatar, name, [github.com/paytbidd](https://gith
 
 [`scripts/list_plugins.py`](scripts/list_plugins.py) calls the public GitHub API, keeps `omarchy-*` repos, drops this site, and writes `site/data/plugins.json`. The site then merges that list with hand overrides.
 
-Enable Pages once: **Settings → Pages → Source → GitHub Actions**. After the first green deploy the URL above is live.
+Enable Pages once (this repo’s tokens cannot flip that setting):
+
+1. Open [Settings → Pages](https://github.com/paytbidd/omarchy-design-factory/settings/pages)
+2. Set **Source** to **GitHub Actions**
+3. Re-run the **Deploy site** workflow under Actions
+
+The first deploys failed with `Resource not accessible by integration` until that source is set. After a green deploy the URL above is live.
 
 ## Hand overrides
 
