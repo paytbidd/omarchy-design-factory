@@ -175,7 +175,7 @@ code {
 
 .row {
   display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) auto;
+  grid-template-columns: 24px minmax(0, 1fr);
   gap: 0.35rem 1.1rem;
   padding: 1.65rem 0;
   border-top: 1px solid var(--line);
@@ -201,6 +201,8 @@ code {
 
 .body {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .row h2 {
@@ -223,14 +225,14 @@ code {
   gap: 0.45rem;
   margin-top: 0.7rem;
   min-width: 0;
-  max-width: 100%;
-  width: fit-content;
+  width: 100%;
   padding: 0.28rem 0.28rem 0.28rem 0.6rem;
   background: var(--chip);
   border-radius: 4px;
 }
 
 .cmd code {
+  flex: 1;
   color: var(--muted);
   overflow-wrap: anywhere;
   min-width: 0;
@@ -277,8 +279,9 @@ code {
 .repo {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 0.4rem;
-  margin-top: 0.22rem;
+  margin-top: 0.65rem;
   color: var(--muted);
   font-size: 0.82rem;
   text-decoration: none;
@@ -351,14 +354,5 @@ html[data-scheme="light"] .moon .moon-outline {
   .page {
     width: min(44rem, calc(100% - 2rem));
     padding-top: 2rem;
-  }
-
-  .row {
-    grid-template-columns: 24px minmax(0, 1fr);
-  }
-
-  .repo {
-    grid-column: 2;
-    margin-top: 0.65rem;
   }
 }
