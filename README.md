@@ -63,11 +63,11 @@ Plugin marks are vendored from **pixelarticons** (MIT, © Gerrit Halfmann), a st
 | Plugin | Glyph |
 | --- | --- |
 | Apple Music Mini | `music` |
-| Macromancy | `keyboard` |
+| Macromancy | `command` (⌘) |
 | Patina | `frame` |
 | Redlight | `sun` |
 | Soundstage | `monitor` |
-| Type | `letter-a` |
+| Type | `letter-t` |
 | Default | `layout` |
 | Copy / copied | `copy` / `check` |
 
