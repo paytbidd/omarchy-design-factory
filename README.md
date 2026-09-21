@@ -70,6 +70,7 @@ Plugin marks are vendored from **pixelarticons** (MIT, © Gerrit Halfmann), a st
 | Redlight | `sun` |
 | Soundstage | `monitor` |
 | Type | `letter-t` |
+| Forecast | `cloud-sun` |
 | Default | `layout` |
 | Copy / copied | `copy` / `check` |
 

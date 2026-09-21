@@ -18,6 +18,7 @@ PLUGIN_MARKS = {
     "sun": "redlight.svg",
     "monitor": "soundstage.svg",
     "letter-a": "type.svg",
+    "cloud-sun": "weather.svg",
     "layout": "default.svg",
     "copy": "copy.svg",
     "check": "check.svg",

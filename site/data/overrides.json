@@ -6,7 +6,8 @@
     "omarchy-macromancy",
     "omarchy-apple-music-mini",
     "omarchy-soundstage",
-    "omarchy-type"
+    "omarchy-type",
+    "omarchy-weather"
   ],
   "plugins": {
     "omarchy-apple-music-mini": {
@@ -38,6 +39,11 @@
       "title": "Type",
       "blurb": "Omarchy font for Chromium apps: Apple Music, Grok Bot, YouTube.",
       "icon": "icons/type.svg"
+    },
+    "omarchy-weather": {
+      "title": "Forecast",
+      "blurb": "Temperature on the bar, UV by day, rain when it is coming.",
+      "icon": "icons/weather.svg"
     }
   }
 }
