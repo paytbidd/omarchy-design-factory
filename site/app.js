@@ -69,7 +69,17 @@ function mergePlugins(listed, overrides) {
       };
     })
     .filter(Boolean)
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort(comparePlugins((overrides && overrides.order) || []));
+}
+
+function comparePlugins(order) {
+  const rank = new Map(order.map((name, index) => [name, index]));
+  return (a, b) => {
+    const aRank = rank.has(a.name) ? rank.get(a.name) : Number.POSITIVE_INFINITY;
+    const bRank = rank.has(b.name) ? rank.get(b.name) : Number.POSITIVE_INFINITY;
+    if (aRank !== bRank) return aRank - bRank;
+    return a.name.localeCompare(b.name);
+  };
 }
 
 async function fetchJson(url) {

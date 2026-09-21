@@ -36,6 +36,7 @@ Edit [`site/data/overrides.json`](site/data/overrides.json).
 ```json
 {
   "exclude": ["omarchy-plugins"],
+  "order": ["omarchy-patina", "omarchy-redlight", "omarchy-macromancy"],
   "plugins": {
     "omarchy-type": {
       "title": "Type",
@@ -49,6 +50,7 @@ Edit [`site/data/overrides.json`](site/data/overrides.json).
 | Field | Effect |
 | --- | --- |
 | `exclude` | Extra repo names to hide (this repo is always hidden) |
+| `order` | Repo names in display order. Named first, then the rest A–Z |
 | `title` | Row heading. Default: `omarchy-` stripped and title-cased |
 | `blurb` | One-line description. Default: the GitHub repo description |
 | `icon` | Path under `site/` to a 1-color SVG. Default: `icons/<short-name>.svg`, then `icons/default.svg` |

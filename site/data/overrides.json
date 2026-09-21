@@ -1,5 +1,13 @@
 {
   "exclude": ["omarchy-plugins"],
+  "order": [
+    "omarchy-patina",
+    "omarchy-redlight",
+    "omarchy-macromancy",
+    "omarchy-apple-music-mini",
+    "omarchy-soundstage",
+    "omarchy-type"
+  ],
   "plugins": {
     "omarchy-apple-music-mini": {
       "title": "Apple Music Mini",
