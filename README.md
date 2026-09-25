@@ -19,6 +19,7 @@ The header is Payton’s GitHub avatar, name, and [github.com/paytbidd](https://
   ```
 
 - A GitHub Action that lists public `paytbidd` repos prefixed `omarchy-*` and deploys Pages
+- A reusable **Marketplace verify** workflow that plugin repos call after a real change, opening or updating a `[Verify]` issue on [omacom/omarchy-plugin-marketplace](https://github.com/omacom/omarchy-plugin-marketplace) when HEAD differs from the listed snapshot
 - `omarchy-plugins` (this site) is excluded from the shelf
 
 ## Auto-list
@@ -57,6 +58,18 @@ Edit [`site/data/overrides.json`](site/data/overrides.json).
 | `hidden: true` | Keep the repo out of the list |
 
 A new public `omarchy-*` repo on `paytbidd` shows up on the next Action run. Add an override if you want a tighter blurb or a custom mark.
+
+## Marketplace verify
+
+Listed `paytbidd/omarchy-*` plugins call [`.github/workflows/marketplace-verify.yml`](.github/workflows/marketplace-verify.yml) from their own `Marketplace verify` workflow. That runs on `workflow_dispatch` and on pushes to `main` that change plugin files (not `.github/`).
+
+It files **Verify and publish a newer upstream commit** when the catalog SHA is behind HEAD, skips when they already match, and edits an open `[Verify]` issue instead of opening a duplicate. Maintainer `approved-and-verified` still has to happen on the marketplace side.
+
+Each plugin repo needs a `MARKETPLACE_GH_TOKEN` secret that can open issues on `omacom/omarchy-plugin-marketplace` (a `gh` token with `repo` or a classic PAT with `public_repo`).
+
+```bash
+python3 scripts/marketplace_verify.py --root ../omarchy-weather --dry-run
+```
 
 ## Icons
 

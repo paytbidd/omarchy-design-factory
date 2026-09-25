@@ -1,0 +1,31 @@
+name: Marketplace verify
+
+on:
+  workflow_call:
+    secrets:
+      MARKETPLACE_GH_TOKEN:
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout plugin
+        uses: actions/checkout@v4
+
+      - name: Checkout verify helper
+        uses: actions/checkout@v4
+        with:
+          repository: paytbidd/omarchy-plugins
+          ref: main
+          path: .marketplace-verify-helper
+
+      - name: Request marketplace verification
+        env:
+          MARKETPLACE_GH_TOKEN: ${{ secrets.MARKETPLACE_GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.MARKETPLACE_GH_TOKEN }}
+        run: python3 .marketplace-verify-helper/scripts/marketplace_verify.py
